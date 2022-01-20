@@ -5,8 +5,123 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&family=Space+Mono:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+
+/*Google Fonts Import*/
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Merriweather:wght@300;400;700;900&family=Montserrat:wght@100;300;400;500;600;700;900&family=Poppins:wght@100;300;400;600;700;800;900&display=swap');
+
+
+  /* Start Theme Variables */
+
+:root {
+    /* Layout */
+    --column-spacing: 40px!important;
+    --max-width: 1150px!important;
+    /* Navbar CTA */
+    --cta-padding: 14px 16px!important;
+    --cta-border-radius: 5px!important;
+    --cta-border: none!important;
+    --cta-shadow: none!important;
+    /* Callout */
+    --callout-padding: 20px 40px 15px 15px!important;
+    --callout-border: 1px solid var(--color-border-default)!important;
+    --callout-border-radius: 10px!important;
+    --callout-shadow: none!important;
+    --callout-icon-size: 15px!important;
+    --callout-emoji-size: 18px!important;
+    /* Collections */
+    --collection-list-item-border-radius: 5px!important;
+    --collection-list-item-padding: 5px 0px 5px 5px!important;
+    --collection-gallery-gap: 30px!important;
+    --collection-title-text-size: 16px!important;
+    --collection-property-text-size: 14px!important;
+    --collection-card-border-radius: 10px!important;
+    --collection-card-padding: 20px!important;
+    --collection-card-border: 1px solid var(--color-border-default)!important;
+    --collection-card-cover-size-small: 172px!important;
+    --collection-card-cover-size-medium: 260px!important;
+    --collection-card-cover-size-large: 320px!important;
+    /*Pill */
+    --notion-pill-padding: 2px 5px!important;
+    --notion-pill-border-radius: 0px!important;
+    --notion-pill-text-size: 11px!important;
+    --notion-pill-text-weight: 500!important;
+    --notion-pill-text-transform: uppercase!important;
+    --notion-pill-letter-spacing: 1px!important;
+    /* Images */
+    --image-border-radius: 10px!important;
+    /* Misc */
+    --divider-margin: 15px 0px!important;
+    --divider-opacity: .8!important;
+    /* Typography */
+    --text-spacing: -.1px!important;
+    --notion-text-margin: 0px 0px 0px 0px!important;
+    /* h1 */
+    --h1-size: 2.6rem!important;
+    --h1-weight: 500!important;
+    --h1-spacing: -1px!important;
+    --h1-margin: 15px 0px 20px 0px!important;
+    --h1-line-height: 1.2!important;
+    /* h2 */
+    --h2-size: 2rem!important;
+    --h2-weight: 500!important;
+    --h2-spacing: -.5px!important;
+    --h2-margin: 10px 0px 20px 0px!important;
+    --h2-line-height: 1.3!important;
+    /* h3 */
+    --h3-size: 1.5rem!important;
+    --h3-weight: 500!important;
+    --h3-spacing: -.5px!important;
+    --h3-margin: 10px 0px 5px 0px!important;
+    --h3-line-height: 1.2!important;
+    /* Link */
+    --link-border-width: 0px 0px 0px 0px!important;
+    --link-border-style: none!important;
+    --link-border-color: none!important;
+    /* Colors */
+    --color-bg-default: #2f3437!important;
+    --color-text-default: #ffffff!important;
+    --color-border-default: #454b4e!important;
+    --color-text-default-light: rgba(55, 53, 47, 0.6)!important;
+    --color-text-gray: #A5A5A5!important;
+    --color-text-yellow: #f0bd66!important;
+    --color-bg-gray-light: #1b1b1b!important;
+}
+
+
+/* End Theme Variables*/
+
+
+/* Start Theme overwrites */
+
+p.notion-text__content,
+.notion-bulleted-list,
+.notion-numbered-list {
+    font-family: var(--secondary-font)!important;
+}
+
+.bg-gray-light {
+    color: white!important;
+}
+
+.notion-semantic-string .date {
+    color: var(--color-text-default)!important;
+}
+
+
+/* End Theme overwrites */
+
+
+/* Start Builder Base */
+
+
+
+
+
+
+
+
+
+
 .container,
 .container-fluid,
 .container-xl,
@@ -25,7 +140,11 @@
 
 @media (min-width: 768px) {
   .container-md, .container-sm, .container {
-    max-width: 860px; } }
+    max-width: 860px; } 
+  #block-2c1fed01ba7c4d419d80d1080e7d28d1{
+    margin-top: -10%;
+  }
+  }
 
 @media (min-width: 1200px) {
   .container-lg, .container-md, .container-sm, .container {
@@ -836,39 +955,48 @@ ul, ol, li {
   color: #F7F6FB !important; }
 
 h1, h2 {
-  font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
-  letter-spacing: -0.025rem !important; }
+  /*font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;*/
+  /*letter-spacing: -0.025rem !important; */
+}
 
 h1 {
-  margin-top: 6.5rem !important;
-  margin-bottom: 0.5rem !important;
-  font-size: 3rem !important; }
+  /*margin-top: 6.5rem !important;*/
+  /*margin-bottom: 0.5rem !important;*/
+  font-size: 3rem !important; 
+}
   @media (max-width: 767.98px) {
     h1 {
-      margin-top: 2.75rem !important;
-      font-size: 2.25rem !important; } }
+      /*margin-top: 2.75rem !important;*/
+      /*font-size: 2.25rem !important; */
+    } }
 h2 {
-  margin-top: 0 !important;
-  margin-bottom: 1rem !important;
-  font-size: 1.875rem !important; }
-  @media (max-width: 1199.98px) {
+  /*margin-top: 0 !important;*/
+  /*margin-bottom: 1rem !important;*/
+  /*font-size: 1.875rem !important; */
+}
+  @media (max-width: 1199.98px) 
+  {
     h2 {
-      font-size: 1.75rem !important; } }
+      /*font-size: 1.75rem !important; */
+    } }
 h3 {
-  font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.075rem !important;
-  font-size: 1.0875rem !important; }
+  /*font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;*/
+  /*text-transform: uppercase !important;*/
+  /*letter-spacing: 0.075rem !important;*/
+  /*font-size: 1.0875rem !important; */
+}
 
 p, a, p a, ul, ul li {
-  color: rgba(247, 246, 251, 0.5) !important;
-  margin-bottom: 1.5rem !important;
-  font-size: 1.0875rem !important;
-  line-height: 1.675 !important;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important; }
+  /*color: rgba(247, 246, 251, 0.5) !important;*/
+  /*margin-bottom: 1.5rem !important;*/
+  /*font-size: 1.0875rem !important;*/
+  /*line-height: 1.675 !important;*/
+  /*font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important; */
+}
   @media (max-width: 1199.98px) {
     p, a, p a, ul, ul li {
-      font-size: 1rem !important; } }
+      /*font-size: 1rem !important; */
+    } }
 ul li {
   margin-bottom: 0.5rem !important; }
 
@@ -908,7 +1036,7 @@ pre {
   border-bottom: none !important;
   color: #F7F6FB !important;
   border-radius: 500rem !important;
-  font-weight: 500 !important;
+  /*font-weight: 500 !important;*/
   transition: 0.2s all ease-in-out;
   line-height: 1 !important; }
   .notion-text p.notion-text__content span.notion-semantic-string span strong a.notion-link:hover {
@@ -918,7 +1046,7 @@ pre {
 
 .notion-text p.notion-text__content span.notion-semantic-string span em a.notion-link {
   font-style: normal !important;
-  font-weight: 500 !important;
+  /*font-weight: 500 !important;*/
   color: #F7F6FB !important;
   border-bottom: 2px solid rgba(247, 246, 251, 0.125) !important;
   transition: all 0.2s ease-in-out !important;
@@ -928,6 +1056,36 @@ pre {
     border-bottom: 2px solid #0E0F13 !important; }
 
 @media (max-width: 767.98px) {
+  #block-382f5340436744f39da6f892c81dc1e9{
+    margin: -24% 0 10px 0 !important;    
+  }
+
+}
+
+@media (max-width: 767.98px) {
+  
+  #block-a3b4c0c98f0e49d7ba4d259c75574e04{
+    order: 1;
+    margin: -20% 0 0 0;
+  
+  }
+  #block-b7a247d3d2d146cb92fab50e64fb19dd{
+    order: 2;
+    margin-top: -35%;
+    margin-bottom: 20px;
+    z-index: 1;
+  }
+
+
+  h2.notion-heading {
+    margin: 0% 5% !important;
+    
+  }
+
+  #block-8c70f5bbc9d6476cbe8872d88a3b7900, #block-a268a111f7e74f088e7ebd741826601f 
+    {
+       margin: 12px 0 12px 0 !important;
+    }
   .notion-text p.notion-text__content span.notion-semantic-string span em {
     display: block !important;
     margin-top: 2rem !important; } }
@@ -1037,7 +1195,7 @@ pre {
       font-weight: 500 !important;
       background: none !important;
       border: none !important;
-      font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+      /*font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;*/
       margin-bottom: 1.5rem; }
     .mobile-nav .right input ~ nav {
       position: absolute !important;
@@ -1131,7 +1289,7 @@ pre {
   .super-content .notion-collection-gallery {
     border-top: none !important; }
   .super-content .notion-collection-gallery.large {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(3, 1fr) !important;
     margin-top: 3rem !important;
     margin-bottom: 3rem !important;
     padding-bottom: 6.5rem !important;
@@ -1153,7 +1311,7 @@ pre {
       -webkit-transform: translateY(0rem) !important;
               transform: translateY(0rem) !important;
       will-change: transform !important;
-      background: rgba(247, 246, 251, 0.1) !important;
+      background: rgb(142 122 223 / 10%) !important;
       margin-top: 1rem !important;
       padding-bottom: 1rem !important; }
       .super-content .notion-collection-gallery.large .notion-collection-card:hover {
@@ -1171,8 +1329,8 @@ pre {
       .super-content .notion-collection-gallery.large .notion-collection-card .notion-collection-card__cover.large > div,
       .super-content .notion-collection-gallery.large .notion-collection-card .notion-collection-card__cover.large img,
       .super-content .notion-collection-gallery.large .notion-collection-card .notion-collection-card__cover.large > span {
-        height: 28.75rem !important;
-        max-height: 28.75rem !important;
+        height: 22.75rem !important;
+        max-height: 22.75rem !important;
         border-bottom: none !important; }
       .super-content .notion-collection-gallery.large .notion-collection-card .notion-property__title {
         font-size: 1.25rem !important;
@@ -1189,7 +1347,7 @@ pre {
         .super-content .notion-collection-gallery.large .notion-collection-card .notion-property__title .notion-property__title__icon-wrapper {
           display: none !important; }
         .super-content .notion-collection-gallery.large .notion-collection-card .notion-property__title span {
-          font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+          /*font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;*/
           font-size: 1.875rem !important;
           margin-bottom: 0.5rem !important;
           line-height: 1.2875 !important; }
@@ -1233,12 +1391,12 @@ pre {
     grid-gap: 2.5rem !important; }
     @media (max-width: 1499.98px) {
       .super-content .notion-collection-gallery.medium {
-        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-columns: repeat(3, 1fr) !important;
         grid-gap: 2rem !important; } }
     @media (max-width: 767.98px) {
       .super-content .notion-collection-gallery.medium {
         grid-template-columns: repeat(1, 1fr) !important; } }
-    .super-content .notion-collection-gallery.medium .notion-collection-card {
+    .super-content .notion-collection-gallery.medium .notion-collection-card https://kaylinkudla.super.site/{
       box-shadow: none !important;
       border-radius: 0.5rem !important;
       transition: -webkit-transform 450ms !important;
@@ -1295,7 +1453,7 @@ pre {
     margin: 1rem 0 3rem 0 !important;
     padding: 1rem 1rem 1rem 2rem !important;
     font-size: 1.5rem !important;
-    font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+    /*font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;*/
     font-weight: 500 !important;
     color: #F7F6FB !important; }
 
@@ -1365,3 +1523,11 @@ pre {
 .notion-header__content,
 .notion-divider {
   display: none !important; }
+
+
+
+
+
+
+
+
