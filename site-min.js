@@ -1,0 +1,1 @@
+$(document).ready((function(){$("#nav").on("change",(function(o){$(this).prop("checked")?$("body").css("overflow","hidden"):$("body").css("overflow","auto")})),$("[id^=block-blog-]").addClass("blog-post")}));
